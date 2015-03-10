@@ -1,0 +1,43 @@
+* Azimuth only and azimuth / elevation rotator support
+* Serial interface using the standard Arduino USB port
+* Control Port Protocol Support:
+** Yaesu GS-232A
+** Yaesu GS-232B
+** Easycom
+* Support for position sensors:
+** Potentiometers / Analog Voltage
+** Rotary Encoders
+** Pulse Ouput
+** HMC5883L digital compass
+** ADXL345 accelerometer
+** LSM303 digital compass and accelerometer support under development
+* LCD display (2 x 20 preferred, but any LCD over 15 columns supported)
+* Can be interfaced with non-Yaesu rotators, including homebrew systems
+* Directional indication on LCD display (North, South, North Northwest, etc.) along with degrees
+* Intelligent automatic rotation (utilizes overlap on 450 degree rotators)
+* Support for both 360 degree and 450 degree azimuth rotators or any rotation capability up to 719 degrees
+* North Center and South Center support
+* Support for any starting point (fully clockwise)
+* Optional automatic azimuthal rotation slowdown feature when reaching target azimuth
+* Optional rotation slow start (now with smooth ramp up)
+* Optional brake engage/disengage lines for azimuth and elevation
+* Buttons for manual rotation
+* Command timeout
+* Timed interval rotation
+* Overlap LED Indicator
+* Help screen
+* Speed Control, both single PWM output (compatible with Yaesu controllers) and dual PWM rotate CW and rotate CCW * * outputs and dual elevate up and elevate down outputs
+* Variable frequency outputs
+* Preset Control using either potentiometers or rotary encoders with optional preset start button
+* Speed Potentiometer
+* Manual Rotation Limits
+* Classic 4 bit, Adafruit I2C LCD, and Yourduino.com Display Support
+* Optional tenth of a degree support with Easycom protocol (i.e. 123.4 degrees)
+* Park button
+* Azimuth and elevation calibration tables
+* Host unit and Remote unit operation for remotely located sensors using two Arduinos or ATMega chips
+* Works with hamlib rotctl/rotcltd
+* Moon and sun tracking
+* GPS Synchronization
+* Realtime Clock Module Support
+* Ethernet Shield Support
