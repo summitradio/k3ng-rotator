@@ -41,3 +41,5 @@
 * GPS Synchronization
 * Realtime Clock Module Support
 * Ethernet Shield Support
+
+This unit can be interfaced with Yaesu rotator controller using the standard 6 pin DIN port on the back.  Older controllers may not have the DIN interface and will require opening and soldered connections.  This unit does not disable the rotator controller and all controls on it can continue to be used (although it is advisable not to attempt to control the rotator with manual controls and with the interface simultaneously.)  Other rotator controllers can be interfaced as well with a little research and design.
