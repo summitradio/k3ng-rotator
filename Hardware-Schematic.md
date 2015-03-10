@@ -1,0 +1,6 @@
+--image to be added--
+
+Note: Refer to the pin numbers on the inside of the Arduino component outline (i.e. D1, D2, A0, A1, etc.) and not the numbers on the outside of it (1, 2, 3...).
+
+The schematic above shows a basic setup supporting a 4 bit interface LCD, azimuth and elevation voltage inputs, manual buttons, and a single variable speed voltage output.  Additional controls and options such as an azimuth present potentiometer, azimuth and elevation preset rotary encoders, and brake control lines can be added as needed if the appropriate pins are chosen and set in code at compilation time.  If using with an azimuth-only rotator, all components related to elevation can be omitted.  So, again, keep in mind the above schematic is a basic unit that will work for most applications and additional features will require additional components.
+This unit has been successfully interfaced to a Yaesu GS-1000DXA control unit, other various Yaesu G series control units, various other non-Yaesu rotator control units.
