@@ -1,8 +1,8 @@
 Welcome to the k3ng_rotator_controller wiki!
 
-Visit the radioartisan blog page on the rotator controller here: [http://blog.radioartisan.com/yaesu-rotator-computer-serial-interface/](http://blog.radioartisan.com/yaesu-rotator-computer-serial-interface/)
+Visit the Radio Artisan project here: [http://blog.radioartisan.com/yaesu-rotator-computer-serial-interface/](http://blog.radioartisan.com/yaesu-rotator-computer-serial-interface/)
 
-Visit the radioartisan blog for other great projets and other articles:  [http://blog.radioartisan.com/](http://blog.radioartisan.com/)
+Visit the Radio Artisan blog for other great projects and other articles:  [http://blog.radioartisan.com/](http://blog.radioartisan.com/)
 
 Please note that this wiki is under construction.
 
@@ -11,4 +11,4 @@ Use the project documentation available [Here](https://docs.google.com/document/
 If the information you are looking for is not in the documentation, please visit the radio artisan Yahoo group here:
 [https://groups.yahoo.com/neo/groups/radioartisan/info](https://groups.yahoo.com/neo/groups/radioartisan/info)
 
-Thank you.
+Thank you and 73!
