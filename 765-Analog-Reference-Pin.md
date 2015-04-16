@@ -1,0 +1,1 @@
+To activate use of the Arduino/AVR analog reference pin for any analog readings (i.e. azimuth and elevation potentiometer sensors), activate OPTION_EXTERNAL_ANALOG_REFERENCE.  This can be used to increase the accuracy of readings by tieing the analog reference pin to the +5 volt line.
