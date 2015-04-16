@@ -1,4 +1,4 @@
---image to be added--
+[Basic Schematic](https://radioartisan.files.wordpress.com/2011/03/k3ng_arduino_rotator_controller_2011092801.png)
 
 Note: Refer to the pin numbers on the inside of the Arduino component outline (i.e. D1, D2, A0, A1, etc.) and not the numbers on the outside of it (1, 2, 3...).
 
