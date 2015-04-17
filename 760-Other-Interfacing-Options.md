@@ -50,3 +50,22 @@ Related settings:
     #define POWER_SWITCH_IDLE_TIMEOUT 15
 
 The timeout unit is minutes.
+
+#Analog Heading Output Pins
+
+This feature will activate pins that will output voltage directly proportional to the azimuth and elevation.
+
+Feature Activation:
+
+    FEATURE_ANALOG_OUTPUT_PINS
+
+Pins:
+
+    #define pin_analog_az_out 0
+    #define pin_analog_el_out 0
+
+Related settings:
+
+    #define ANALOG_OUTPUT_MAX_EL_DEGREES 180
+
+
