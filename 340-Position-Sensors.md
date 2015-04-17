@@ -1,10 +1,13 @@
 Currently several types of position sensors are supported:
 * Potentiometer / Analog Voltage Inputs
 * Rotary Encoder
+* Incremental Encoder
+* A2 Absolute Encoder (under development)
 * Pulse
 * ADXL345 Accelerometer
 * HMC5883L digital compass
 * LSM303 digital compass and accelerometer
+* HH-12 / AS5045
 
 You can mix and match azimuth and elevation sensors.  For example, you can use a potentiometer for the azimuth and an ADXL345 accelerometer for the elevation.  Aren't choices great?
 
@@ -119,11 +122,12 @@ The sensor is connected using the I2C bus.
 ## Incremental Rotary Encoders
 
 
-Incremental rotary shaft encoders are capable of the highest stability and accuracy, considerably better than 0.1 degree. The usual disadvantage of incremental encoders is that the position value accumulated is volatile with loss of power. K3NG software eliminates this disadvantage by maintaining the headings and recalibrating the bearing during normal rotor use.  A good affordable encoder is the Omron E6B2-CWZ6C 2000P. There are many different SE configurations available, most of which are useable if accommodation is made to the Arduino interface. 
+Incremental rotary shaft encoders are capable of the highest stability and accuracy, considerably better than 0.1 degree. The usual disadvantage of incremental encoders is that the position value accumulated is volatile with loss of power.  The software eliminates this disadvantage by maintaining the headings and recalibrating the bearing during normal rotor use.  A good affordable encoder is the Omron E6B2-CWZ6C 2000P. There are many different SE configurations available, most of which are useable if accommodation is made to the Arduino interface. 
 
 The following text only applies to the Omron E6B2.
 
-There are two quadrature outputs A & B and an index pulse called Z. All three outputs are open-collector NPN transistors.  The power required is a voltage between +5 and +24, the Arduino Vin voltage is a convenient source. The K3NG code provides for internal pullups which will work just fine on the bench. If the distance between the SE and the Arduino is significant discrete pullups (1K ~ 5K to 5 volts) at the Arduino should be provided. A and B are 50 % duty cycle squarewaves phased 90 degrees apart. This SE outputs 2000 A/B counts per revolution. Z is a narrow pulse that occurs once per SE revolution. Direction of rotation indication can be had by reversing the A and B SE outputs to the Arduino.
+There are two quadrature outputs A & B and an index pulse called Z. All three outputs are open-collector NPN transistors.  The power required is a voltage between +5 and +24, the Arduino Vin voltage is a convenient source. The code provides for internal pullups which will work just fine on the bench. If the distance between the SE and the Arduino is significant discrete pullups (1K ~ 5K to 5 volts) at the Arduino should be provided. A and B are 50 % duty cycle squarewaves phased 90 degrees apart. This SE outputs 2000 A/B counts per revolution. Z is a narrow pulse that occurs once per SE revolution. Direction of rotation indication can be had by reversing the A and B SE outputs to the Arduino.
+
 Configuration:
 
 `#define FEATURE_AZ_POSITION_INCREMENTAL_ENCODER`
@@ -163,7 +167,9 @@ Debugging
 
 
 ## HH-12 / AS5045
+
 {under construction}
+
 Feature Activation
 
 `#define FEATURE_AZ_POSITION_HH12_AS5045_SSI`
@@ -187,13 +193,26 @@ Pin Definitions
 Hardware Connection
 
 ## LSM303
-{under construction}
 
-`#define FEATURE_AZ_POSITION_LSM303`
+The LSM303 device is supported for use with azimuth and elevation sensing, using two different libraries.  Azimuth is sensed through the LSM303 compass, and elevation is sensed via the LSM303 accelerometer.  It is not required to use both devices within the LSM303.
 
-`#define FEATURE_EL_POSITION_LSM303 `
+Feature Activation
+
+Using the Adafruit LSM303 Library:
+
+`FEATURE_AZ_POSITION_ADAFRUIT_LSM303`
+
+`FEATURE_EL_POSITION_ADAFRUIT_LSM303`
+
+Using the Pololu LSM303 Library:
+
+`FEATURE_AZ_POSITION_POLOLU_LSM303`
+
+`FEATURE_EL_POSITION_POLOLU_LSM303`
+
 
 ## Memsic 2125
+
 Feature Activation
 
 `#define FEATURE_EL_POSITION_MEMSIC_2125`
