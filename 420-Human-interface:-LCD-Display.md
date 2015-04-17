@@ -1,14 +1,29 @@
+## LCD
+
+A variety of LCD displays are supported and the information displayed can be customized.
+
+## Defining LCD Characteristics 
+
+A 20 column LCD display is preferred, but a 16 column unit can be used.  Set the number of columns and rows of your display in these lines:
+
+`#define LCD_COLUMNS 20`
+
+`#define LCD_ROWS 4`
+
+The update frequency of the display can be adjusted with this setting:
+
+`#define LCD_UPDATE_TIME 1000`
+
+Various I2C displays use this setting:
+
+`#define I2C_LCD_COLOR GREEN`
+
 ## Standard 4 Bit LCD Interface
 
 To use a common classic 4 bit LCD display unit, uncomment out this line (remove the double-slashes "//") to enable it:
 
 `#define FEATURE_4_BIT_LCD_DISPLAY`
 
-The LiquidCrystal declaration specifies the pins to be used for interfacing.  Consult the [Arduino LiquidCrystal library documentation](http://arduino.cc/en/Tutorial/LiquidCrystal) for details.¸
-
-A 2 row by 20 column LCD display is preferred, but a 16 column can be used.  Set the number of columns of your display in this line:
-
-`#define LCD_COLUMNS 20`
 
 ## Adafruit I2C LCD
 
