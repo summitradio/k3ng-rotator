@@ -210,6 +210,12 @@ Using the Pololu LSM303 Library:
 
 `FEATURE_EL_POSITION_POLOLU_LSM303`
 
+The Pololu code uses these arrays for calibration:
+
+`#define POLOLU_LSM_303_MIN_ARRAY {+59, +19, -731}`
+`#define POLOLU_LSM_303_MAX_ARRAY {+909, +491, +14}`
+
+These settings do not apply when using the Adafruit LSM303 library.  Use the Pololu calibration program to determine the correct calibration values.
 
 ## Memsic 2125
 
