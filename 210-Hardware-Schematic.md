@@ -4,11 +4,13 @@
 
 Note: Refer to the pin numbers on the inside of the Arduino component outline (i.e. D1, D2, A0, A1, etc.) and not the numbers on the outside of it (1, 2, 3...).
 
-Inputs
+##Inputs
+
     Azimuth V - Analog voltage from rotator or rotator control unit, proportional to azimuth heading, 0 to 5 volts
     Elevation V - Analog voltage from rotator or rotator control unit, proportional to elevation, 0 to 5 volts
 
-Outputs
+##Outputs
+
     Rotate CCW - Pulled low to activate counter-clockwise (left) azimuthal rotation
     Rotate CW - Pulled low to activate clockwise (right) azimuthal rotation
     Rotate Down - Pulled low to activate downward elevation rotation
