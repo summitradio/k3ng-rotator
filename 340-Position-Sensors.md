@@ -1,3 +1,5 @@
+##Introduction
+
 Currently several types of position sensors are supported:
 * Potentiometer / Analog Voltage Inputs
 * Rotary Encoder
@@ -128,7 +130,7 @@ The following text only applies to the Omron E6B2.
 
 There are two quadrature outputs A & B and an index pulse called Z. All three outputs are open-collector NPN transistors.  The power required is a voltage between +5 and +24, the Arduino Vin voltage is a convenient source. The code provides for internal pullups which will work just fine on the bench. If the distance between the SE and the Arduino is significant discrete pullups (1K ~ 5K to 5 volts) at the Arduino should be provided. A and B are 50 % duty cycle squarewaves phased 90 degrees apart. This SE outputs 2000 A/B counts per revolution. Z is a narrow pulse that occurs once per SE revolution. Direction of rotation indication can be had by reversing the A and B SE outputs to the Arduino.
 
-Configuration:
+#Configuration
 
 `#define FEATURE_AZ_POSITION_INCREMENTAL_ENCODER`
 
@@ -158,17 +160,21 @@ Read [http://arduino.cc/en/Reference/AttachInterrupt](http://arduino.cc/en/Refer
 
 `#define EL_POSITION_INCREMENTAL_ENCODER_B_PIN_INTERRUPT 1  `
 
-`#define AZ_POSITION_INCREMENTAL_ENCODER_PULSES_PER_REV 8000.0`
+`#define AZ_POSITION_INCREMENTAL_ENCODER_PULSES_PER_REV 2000.0`
 
-`#define EL_POSITION_INCREMENTAL_ENCODER_PULSES_PER_REV 8000.0`
+`#define EL_POSITION_INCREMENTAL_ENCODER_PULSES_PER_REV 2000.0`
 
-Debugging
-{under construction}
+
+#Advanced Configuration
+
+These can be used to set the change the heading at the Z pulse point.  Normally this is set to 0 degreees.
+
+`#define AZ_INCREMENTAL_ENCODER_ZERO_PULSE_POSITION 0  // can be 0 to 4 x AZ_POSITION_INCREMENTAL_ENCODER_PULSES_PER_REV`
+`#define EL_INCREMENTAL_ENCODER_ZERO_PULSE_POSITION 0  // can be 0 to 4 x EL_POSITION_INCREMENTAL_ENCODER_PULSES_PER_REV`
 
 
 ## HH-12 / AS5045
 
-{under construction}
 
 Feature Activation
 
