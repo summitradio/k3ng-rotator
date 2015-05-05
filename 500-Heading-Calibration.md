@@ -51,6 +51,22 @@ Recalibration of the system will occur automatically every time the rotor bearin
 The azimuth and elevation can be calibrated to the current sun or moon position using the \XS and \XM commands, if the sun or moon is visible.  This feature is intended to be used by manually rotating an antenna towards the sun or moon and peaking for maximum solar noise or EME signals, and then executing the appropriate command.
 The rotator controller clock must be accurately set to Zulu time for this feature to work accurately.
 
+Push buttons for sun and/or moon position calibration can be added to the hardware using `FEATURE_SUN_PUSHBUTTON_AZ_EL_CALIBRATION` and `FEATURE_MOON_PUSHBUTTON_AZ_EL_CALIBRATION`.
+
+IO Pins for this are set in this area:
+
+`#ifdef FEATURE_SUN_PUSHBUTTON_AZ_EL_CALIBRATION`
+
+`#define pin_sun_pushbutton_calibration 0             // normally HIGH, have button pull LOW`
+
+`#endif //FEATURE_SUN_PUSHBUTTON_AZ_EL_CALIBRATION`
+
+`#ifdef FEATURE_MOON_PUSHBUTTON_AZ_EL_CALIBRATION`
+
+`#define pin_moon_pushbutton_calibration 0            // normally HIGH, have button pull LOW`
+
+`#endif //FEATURE_MOON_PUSHBUTTON_AZ_EL_CALIBRATION`
+
 ## Heading Sampling / Averaging
 
 There are several settings to help you tweak the behavior of the heading sample.
