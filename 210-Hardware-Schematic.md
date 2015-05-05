@@ -22,3 +22,7 @@ The schematic above shows a basic setup supporting a 4 bit interface LCD, azimut
 The buttons and LCD be omitted if a simple computer to rotator interface is desired.  If variable speed is not needed, the components associated with the Speed Voltage output (C7, R8) can be omitted.
 
 If more sophisticated position sensors are desired, they can be connected to the Arduino pines based on settings within [rotator_pins.h](https://github.com/k3ng/k3ng_rotator_controller/blob/master/rotator_pins.h).  I2C devices are merely connected to the I2C pins of the Arduino.  The exact pins vary between Arduino models, and additional information is [in the Arduino Wire reference](http://www.arduino.cc/en/Reference/Wire).
+
+#Additional Schematic Diagrams
+
+RemoteQTH.com offers a [KiCad schematic of their hardware](http://remoteqth.com/download-count.php?Down=hw/rotator_interface_33.zip) that you can use for additional guidance or hardware ideas.
