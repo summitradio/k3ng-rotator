@@ -25,4 +25,4 @@ If more sophisticated position sensors are desired, they can be connected to the
 
 #Additional Schematic Diagrams
 
-RemoteQTH.com offers a [KiCad schematic of their hardware](http://remoteqth.com/download-count.php?Down=hw/rotator_interface_33.zip) that you can use for additional guidance or hardware ideas.
+[RemoteQTH.com](http://remoteqth.com) offers a [KiCad schematic of their hardware](http://remoteqth.com/download-count.php?Down=hw/rotator_interface_33.zip) that you can use for additional guidance or hardware ideas.
