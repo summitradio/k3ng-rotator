@@ -1,11 +1,13 @@
 ## Overlap LED
 
-To activate the Overlap LED line, change the 0 (zero) in this line to whatever pin you wish to use:
+To activate the Overlap LED line, change the 0 (zero) in this line to whatever pin you wish to use in [rotator_pins.h](https://github.com/k3ng/k3ng_rotator_controller/blob/master/rotator_pins.h):
 
 `#define overlap_led 0`
 
 To disable, set the pin to 0.  The Overlap LED will be activated whenever the azimuth is greater than the rotator 
 starting (fully CCW) azimuth.
+
+To have the LED blink, set the `OPTION_BLINK_OVERLAP_LED` feature in [rotator_features.h](https://github.com/k3ng/k3ng_rotator_controller/blob/master/rotator_features.h) .  The blink rate can be varied with the `OPTION_OVERLAP_LED_BLINK_MS` setting in [rotator_settings](https://github.com/k3ng/k3ng_rotator_controller/blob/master/rotator_settings.h).
 
 ## Rotation Indicator LED
 
