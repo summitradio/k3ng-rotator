@@ -41,4 +41,58 @@
 
 Backslash commands are available by default and are available regardless of activation of Yaesu or Easycom commands.
 
-    {under construction}
+    \Ax[xxx][.][xxxx] - manually set azimuth
+    \Ax[x][x]         - manually set azimuth (FEATURE_AZ_POSITION_ROTARY_ENCODER & FEATURE_AZ_POSITION_PULSE_INPUT)
+    \Bx[xxx][.][xxxx] - manually set elevation
+    \Bx[x][x]         - manually set elevation (FEATURE_EL_POSITION_ROTARY_ENCODER & FEATURE_EL_POSITION_PULSE_INPUT)
+    \C                - display clock
+    \D                - activate debug logs
+    \E                - initialize EEPROM
+    \Fxx              - change I/O pin LOW, xx = pin number
+    \Gxxxxxx          - set coordinates using grid square
+    \L                - rotate to long path
+    \Mx               - activate or deactivate moon tracking (x: 0 = deactivate, 1 = activate)
+    \Nxx              - change I/O pin HIGH, xx = pin number
+    \Oyyyymmddmm      - set clock
+    \P                - park antenna
+    \R                - remote port receive sniff activate/deactivate
+    \S[string]        - send text out remote port
+    \T                - remote port transmit sniff activate/deactivate
+    \Ux               - activate or deactivate sun tracking (x: 0 = deactivate, 1 = activate)
+    \Wxxyyy           - turn on pin PWM; xx = pin number, yyy = PWM value (0-255)
+    \XM               - calibrate azimuth and elevation to current moon position
+    \XS               - calibrate azimuth and elevation to current sun position
+    \X0               - clear calibration to defaults
+    \Z                - suspend automatic remote commands
+
+    UNDER_DEVELOPMENT_REMOTE_UNIT_COMMANDS (part of 3.0 release...)
+
+    \?ARxx            - analog pin read; xx = pin #
+    \?AS              - query azimuth rotation status
+    \?AWxxyyy         - analog pin write; xx = pin #, yyy = value to write (0 - 255)
+    \?AZ              - query azimuth
+    \?CL              - read clock
+    \?DLxx            - digital pin write low; xx = pin #
+    \?DHxx            - digital pin write high; xx = pin # 
+    \?DIxx            - digital pin initialize as input; xx = pin #
+    \?DOxx            - digital pin initialize as output; xx = pin # (01, 02, A0,etc.)
+    \?DPxx            - digital pin initialize as input with pullup; xx = pin #
+    \?DRxx            - digital pin read; xx = pin #
+    \?DTxxyyyy        - digital pin tone output; xx = pin #, yyyy = frequency
+    \?EL              - query elevation
+    \?ES              - query elevation rotation status
+    \?GAxxx.x         - go to AZ xxx.x
+    \?GExxx.x         - go to EL
+    \?GS              - query GPS sync status
+    \?NTxx            - no tone; xx = pin #
+    \?PG              - ping remote
+    \?RD              - rotate down
+    \?RC              - read coordinates
+    \?RL              - rotate left
+    \?RR              - rotate right
+    \?RU              - rotate up
+    \?SA              - stop azimuth rotation
+    \?SE              - stop elevation rotation
+    \?SS              - stop all rotation
+    \!OKxx[]          - response to command sent to remote unit, valid command
+    \!??xx[]          - response to command sent to remote unit, error
