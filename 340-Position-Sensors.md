@@ -234,3 +234,12 @@ Pin Definitions
 `#define pin_memsic_2125_x 0`
 
 `#define pin_memsic_2125_y 0`
+
+## US Digital A2 Absolute Encoders
+
+(Under construction)
+
+Interface Schematics, Courtesy of Walter, ON4BCB:
+
+[SEI2TTL.pdf](https://github.com/k3ng/k3ng_rotator_controller/files/15745/SEI2TTL.pdf)
+[SEI2TTL_pcb.pdf](https://github.com/k3ng/k3ng_rotator_controller/files/15746/SEI2TTL_pcb.pdf)
