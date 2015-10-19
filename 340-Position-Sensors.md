@@ -242,5 +242,6 @@ Pin Definitions
 Interface Details, Courtesy of Walter, ON4BCB:
 
 [Schematic](https://github.com/k3ng/k3ng_rotator_controller/files/15745/SEI2TTL.pdf)
+
 [PCB Artwork](https://github.com/k3ng/k3ng_rotator_controller/files/16414/usdigital.interface.PCB.pdf)
 
