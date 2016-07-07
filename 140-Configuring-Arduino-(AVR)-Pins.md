@@ -1,1 +1,1 @@
-All interface pins are defined in the Pin Definitions section of the code **in the rotator_pins.h file**.  Many pins offer optional functionality which can be left disabled by leaving the pin defined with a zero (0) value.  Pin settings and functionality are described in more detail below.
+All interface pins are defined in the Pin Definitions section of the code **in the rotator_pins.h file**.  Many pins offer optional functionality which can be left disabled by leaving the pin defined with a zero (0) value.
