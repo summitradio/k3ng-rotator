@@ -44,21 +44,21 @@ The preset potentiometer is currently implemented only for the azimuth, not elev
 
 Preset controls using rotary encoders are supported for both azimuth and elevation.  To enable, uncomment the appropriate lines:
 
-`#define FEATURE_AZ_ENCODER_SUPPORT`
+`#define FEATURE_AZ_PRESET_ENCODER`
 
-`#define FEATURE_EL_ENCODER_SUPPORT`
+`#define FEATURE_EL_PRESET_ENCODER`
 
-Note that FEATURE_EL_ENCODER_SUPPORT requires FEATURE_AZ_ENCODER_SUPPORT.
+Note that FEATURE_EL_PRESET_ENCODER requires FEATURE_AZ_PRESET_ENCODER.
 
 Pins for the controls are defined here:
 
-`#define az_rotary_pin1 0`
+`#define az_rotary_preset_pin1 0`
 
-`#define az_rotary_pin2 0`
+`#define az_rotary_preset_pin2 0`
 
-`#define el_rotary_pin1 0`
+`#define el_rotary_preset_pin1 0`
 
-`#define el_rotary_pin2 0`
+`#define el_rotary_preset_pin2 0`
 
 The center pin of the rotary control should be grounded.  No pull up resistors on CW and CCW pins of the rotary encoder are needed as internal Arduino pullups are enabled with this line:
 
@@ -66,7 +66,7 @@ The center pin of the rotary control should be grounded.  No pull up resistors o
 
 By default the rotary encoders have "absolute" values that are initiated with the current azimuth (and elevation) at start up.  If the azimuth or elevation is changed through other means such as commands or the manual rotation buttons, the rotary encoder presets maintain their values.  If you would like the encoder to act in a "relative" fashion, enable this line:
 
-`#define OPTION_ENCODER_RELATIVE_CHANGE`
+`#define OPTION_PRESET_ENCODER_RELATIVE_CHANGE`
 
 This will cause the rotary encoder preset controls to decrease or increase the azimuth or elevation relative to the current azimuth or elevation.  If the unit is rotating or elevating to a heading when a rotary encoder preset is invoked, the current target azimuth and/or elevation is used and adjusted.
 
@@ -74,7 +74,7 @@ This will cause the rotary encoder preset controls to decrease or increase the a
 
 A speed potentiometer can be added by defining an analog pin in this line:
 
-`#define speed_pot 0`
+`#define az_speed_pot 0`
 
 As of this writing the potentiometer is not on the schematic, however you can use a 1K to 100K potentiometer, connect one end to ground, the other end to +5 volts, and the center or wiper potentiometer pin to the analog Arduino pin defined in the line above.  You may want to add a 0.01 uF capacitor from the +5V potentiometer to the ground pin.
 
