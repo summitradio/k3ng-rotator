@@ -1,6 +1,6 @@
-## Yaesu GS-232B Emulation
+## Yaesu GS-232 Emulation
 
-When activating `FEATURE_YAESU_EMULATION` the code defaults to GS-232A emulation, however also activating `OPTION_GS_232B_EMULATION` will default the interface protocol to GS-232B emulation.  This emulation adds support for the following commands:
+When activating `FEATURE_YAESU_EMULATION` the code defaults to GS-232B emulation, however if you comment out `#define OPTION_GS_232B_EMULATION` it will default the interface protocol to GS-232A emulation.  This GS-232B emulation adds support for the following commands:
 
 * Z - toggle north and south center mode
 
@@ -9,6 +9,8 @@ When activating `FEATURE_YAESU_EMULATION` the code defaults to GS-232A emulation
 * P45 - switch to 450 degree mode
 
 Additionally, the output of the B, C, and C2 commands is slightly different than in GS-232A emulation.
+
+Beyond the commands above, GS-232A and B are essentially functionally the same.  If A works OK for your setup, there's no pressing need to change to B.
 
 ## Yaesu Timed Buffer Commands
 
