@@ -1,13 +1,3 @@
-## Yaesu GS-232 Emulation and Ham Radio Deluxe
-
-Uncomment the following lines to make the interface in Yaesu mode play better with HRD:
-
-`#define OPTION_C_COMMAND_SENDS_AZ_AND_EL`
-
-`#define OPTION_DELAY_C_CMD_OUTPUT`
-
-_Note: At the time of this writing, "Yaesu GS-232B Az/El" mode in the free version HRD Rotator program has a bug in which it will not properly parse and display the elevation.  Use "Yaesu GS-232A Az/El" mode instead._
-
 ## Yaesu GS-232B Emulation
 
 When activating `FEATURE_YAESU_EMULATION` the code defaults to GS-232A emulation, however also activating `OPTION_GS_232B_EMULATION` will default the interface protocol to GS-232B emulation.  This emulation adds support for the following commands:
