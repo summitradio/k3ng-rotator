@@ -50,11 +50,18 @@ Backslash commands are available by default and are available regardless of acti
     \E                - initialize EEPROM
     \Fxx              - change I/O pin LOW, xx = pin number
     \Gxxxxxx          - set coordinates using grid square
+    \Ix[x][x]         - set az starting point
+    \I                - display the current az starting point
+    \Jx[x][x]         - set az rotation capability
+    \J                - display the current az rotation capability
+    \Kx               - force disable the az brake even if a pin is defined (x: 0 = enable, 1 = disable)
+    \K                - display the current az brake state
     \L                - rotate to long path
     \Mx               - activate or deactivate moon tracking (x: 0 = deactivate, 1 = activate)
     \Nxx              - change I/O pin HIGH, xx = pin number
     \Oyyyymmddmm      - set clock
     \P                - park antenna
+    \Q                - Save settings in the EEPROM and restart
     \R                - remote port receive sniff activate/deactivate
     \S[string]        - send text out remote port
     \T                - remote port transmit sniff activate/deactivate
