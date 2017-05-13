@@ -1,8 +1,8 @@
-#Operation
+# Operation
 
 To start tracking the sun, issue the \U1 command.  To stop moon tracking issue the \U0 command, or issue the Yaesu S command, press the stop button, or issue any rotation command.
 
-#Configuration
+# Configuration
 
 To activate the sun tracking functionality, uncomment the following line before compiling:
 
