@@ -8,6 +8,8 @@ The clock can be queried using the \C command.  The clock can be set with the \O
 
 The example above sets the clock to 2014-01-02 14:35 Z.  If a realtime clock (RTC) module is connected, the \O will also program the module time.
 
+If you are using a local timezone offset as described below, if setting the clock using the \O command, you must enter the UTC (Zulu) time, not the local timezone time.
+
 The Arduino clock frequency can be rather inaccurate over time, often losing or gaining tens of seconds a day, and it can vary with temperature.  A realtime clock module or GPS synchronization is recommended if accurate timekeeping is desired.
 
 The internal clock does not continue to run when the Arduino loses power and must be set each session with the \O command, if an RTC or GPS is not used.
