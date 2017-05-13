@@ -66,13 +66,14 @@ Backslash commands are available by default and are available regardless of acti
     \S[string]        - send text out remote port
     \T                - remote port transmit sniff activate/deactivate
     \Ux               - activate or deactivate sun tracking (x: 0 = deactivate, 1 = activate)
+    \V[-]x[.][x][x][x]- configure clock timezone offset in hours
     \Wxxyyy           - turn on pin PWM; xx = pin number, yyy = PWM value (0-255)
     \XM               - calibrate azimuth and elevation to current moon position
     \XS               - calibrate azimuth and elevation to current sun position
     \X0               - clear calibration to defaults
     \Z                - suspend automatic remote commands
 
-    UNDER_DEVELOPMENT_REMOTE_UNIT_COMMANDS (part of 3.0 release...)
+    UNDER_DEVELOPMENT_REMOTE_UNIT_COMMANDS
 
     \?ARxx            - analog pin read; xx = pin #
     \?AS              - query azimuth rotation status
