@@ -1,4 +1,4 @@
-#Operation
+# Operation
 
 In order to support sun and moon tracking, a time of day clock function is provided.  This uses the internal Arduino millis() function.
 
@@ -16,7 +16,7 @@ If the unit is equipped with both an RTC and GPS, the clock will synchronize off
 
 If a master/slave system is used, the GPS (and RTC) can be remotely located and connected to the slave unit, and the master unit can be configured to synchronize its clock from the remote slave’s clock.
 
-#Configuration
+# Configuration
 
 The clock feature is enabled with the follow line:
 
@@ -27,3 +27,17 @@ The timekeeping accuracy of the clock can be adjusted using this setting:
     #define INTERNAL_CLOCK_CORRECTION 0
 
 A positive number compensates for a slow clock and a negative number compensates for a fast clock.  A number of 0.00145 would make the clock run 0.145% faster.
+
+# Timezones
+
+The clock normally runs in UTC (Zulu) time.  If you would rather display time for a certain timezone, you can use the \V command to set the timezone offset in hours.  The command format is:
+
+    \V[-]x[x].[x][x][x]
+
+For example, to set a negative four hour offset from UTC:
+
+    \V-4
+
+To set a five and a half hour positive offset:
+
+    \V5.5
