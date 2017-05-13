@@ -59,7 +59,7 @@ Backslash commands are available by default and are available regardless of acti
     \L                - rotate to long path
     \Mx               - activate or deactivate moon tracking (x: 0 = deactivate, 1 = activate)
     \Nxx              - change I/O pin HIGH, xx = pin number
-    \Oyyyymmddmm      - set clock
+    \Oyyyymmddmm      - set clock (enter UTC time, not local time)
     \P                - park antenna
     \Q                - Save settings in the EEPROM and restart
     \R                - remote port receive sniff activate/deactivate
