@@ -13,6 +13,6 @@ This would set the coordinates for the center of grid square FN20ev.  Note that 
 
 3. Use the GPS synchronization functionality, described further below.
 
-##Tracking Status
+## Tracking Status
 
 Currently the status of moon and sun tracking can be viewed using the debug output, the \d command.
