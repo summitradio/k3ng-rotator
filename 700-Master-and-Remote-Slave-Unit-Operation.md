@@ -1,20 +1,20 @@
-#Introduction
+# Introduction
 
 I2C sensors offer some real neat options for sensing azimuth and elevation.  These devices are commonly used in game controllers and mobile devices to sense position or movement of the device.  Magnetometers or digital compasses measure azimuth and accelerometers can be used to sense the Earth's gravity and provide an elevation reading.
 One issue facing the builder using these devices is the distance limitations of the I2C bus.  I don't know the exact limit, but anecdotal evidence leads me to believe it is several meters, which poses a problem when attempting to use these devices on an antenna up a tower or in an array perhaps several hundred meters from the operating position.
 But, never fear, others have thought of this issue and as usual we have a solution.  The controller code allows you to compile code for a remote unit which interfaces with a host unit located inside.  The remote unit interfaces with the position sensor devices locally at the rotator/antenna location.  Any normally supported position sensor can be used with the remote unit, including potentiometers, rotary encoders, and I2C devices.  The host unit talks to the remote via serial or Ethernet using a simple protocol, querying it periodically for azimuth and elevation.  The control protocol also offers some ancillary commands for controlling output pins, sniffing remote serial ports, and sending data out remote serial ports which may be useful for automatting other things out at the tower such as antenna switching.  But I digress.
 
-#Hardware
+# Hardware
 
-##Serial
+## Serial
 
 For a serial link, the host unit needs to have two hardware serial ports, the usual Serial port ("Serial0") and Serial1.  This means that an Arduino Mega or a homebrew "bare chip" ATMega2560 or ATMega1284P is required to provide the second serial port.  The host unit Serial1 port interfaces to the Serial port (Serial0) on the remote unit.  Since the remote unit needs only one serial port, an Uno, bare chip ATMega328 or just about any Arduino variant will work.
 
-##Ethernet
+## Ethernet
 
 For an Ethernet master/slave you need to have two Ethernet shields, one for the master and one for the slave.  I would recommend using Arduino Mega boards or equivalent homebrew AVR units as you will need more memory to compile and run the Ethernet code.
 
-#Serial Control Link Details
+# Serial Control Link Details
 
 To interface the host with the remote, you simply need to connect TX on the host to RX on the remote, and RX on the host to TX on the remote.  On an Arduino Mega the Serial1 port TX and RX is pins 18 and 19, respectively.  On the remote, using an Arduino Uno, the Serial TX and RX pins are pins 1 and 0, respectively.
 Depending on your particular installation, some line and signal conditioning may be required.  I have successfully sent the 9600 baud serial link though 700 meters of unshielded twisted pair CAT 5 cable, using two twisted pairs with one conductor in each pair carrying ground and the other conductor carrying the signal.  An additional conductor in the cable can carry DC voltage to power the remote unit.
@@ -63,11 +63,11 @@ If using an Ethernet link, configure the Ethernet port on the slave unit:
 
 If using an Ethernetlink master/slave link, don’t forget to use different IP and MAC addresses for the master and slave units!
 
-#Master/Slave Protocol
+# Master/Slave Protocol
 
 In order to operate a master/slave system you do not need to know the master/slave serial protocol, but the master/slave protocol is simple and easy to understand.  The design goals included fixed length arguments, consistent responses and event messages, and human-creatable and readable commands to insure easy testing and debugging.  Below is a summary of the protocol.
 
-###Host to Remote Commands
+### Host to Remote Commands
 
     PG - ping; the remote should respond with "PG"
     AZ - read azimuth
@@ -96,12 +96,12 @@ In order to operate a master/slave system you do not need to know the master/sla
     OK - report success
     CS - report a cold start
 
-###Error Codes
+### Error Codes
 
     ER01 - Serial port buffer timeout
     ER02 - Command syntax error
 
-###Events
+### Events
 
     EVSxy - Serial port read event; x = serial port number, y = byte returned (serial port #0 = control port, port#1 = remote unit control port)
 
@@ -111,7 +111,7 @@ The RB (reboot) command works on the Arduino Uno, however it locks up the Arduin
 
 For a real world example of master and remote slave operation, check out the Frankenrotator project page.
 
-#Serial Link Testing and Debugging
+# Serial Link Testing and Debugging
 
 To test the remote unit, configure the code as described above, upload it to the remote unit Arduino/AVR chip and connect it to the computer with the appropriate baud rate (9600 baud by default).  Set the terminal program for carriage return and line feed.
 
@@ -205,9 +205,9 @@ Various other host/remote communications settings:
     #define AZ_REMOTE_UNIT_QUERY_TIME_MS 150
     #define EL_REMOTE_UNIT_QUERY_TIME_MS 150
 
-#Ethernet 
+# Ethernet 
 
-##Link Operation
+## Link Operation
 
 {under construction} 
 
@@ -215,7 +215,7 @@ Various other host/remote communications settings:
 
 {under construction}
 
-##Tweaking and Advanced Configuration
+## Tweaking and Advanced Configuration
 
 {under construction}
 
@@ -223,9 +223,9 @@ Various other host/remote communications settings:
     #define ETHERNET_SLAVE_TCP_PORT 23
     #define ETHERNET_PREAMBLE "K3NG" 
 
-#Special Configurations and Features
+# Special Configurations and Features
 
-##One Sensor on Remote Slave and One on Master Unit
+## One Sensor on Remote Slave and One on Master Unit
 
 The master / remote functionality can be used with one sensor connected to the master and the other connected to the remote.  On the master, specify 
 
@@ -236,7 +236,7 @@ or
 
 for whichever sensor is located on the remote unit, then specify the appropriate locally connected sensor feature for the sensor connected to the master.  The master unit will query the remote only for the _GET_FROM_REMOTE_UNIT feature you’ve configured.
 
-##Remote Unit Pin Control and Reading
+## Remote Unit Pin Control and Reading
 
 I/O pins on the remote slave can be controlled and read by the master unit for most functions.  To redirect a master unit pin function to the remote, simply add 100 to the pin number in the rotator_pins.h file of the master unit.  For example, to redirect the pin for rotate_cw to pin 13 on the remote, specify this in the rotator_pins.h file:
 
