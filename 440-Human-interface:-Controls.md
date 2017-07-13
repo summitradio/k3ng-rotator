@@ -12,7 +12,7 @@ As of this writing the potentiometer is not on the schematic, however it's easy 
 
 The unit will automatically rotate a half second after the potentiometer is rotated.  If you would prefer a start button to initiate rotation rather than having it occur automatically, define an input pin in this line:
 
-`#define az_preset_start_button 0`
+`#define preset_start_button 0`
 
 The button is not on the schematic, but it's simply a momentary normally open button that grounds the pin upon closure.  No pull resistor is required.  Upon pressing the button, the unit will initiate rotation based on the position of the potentiometer.
 
