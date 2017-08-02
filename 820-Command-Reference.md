@@ -73,7 +73,9 @@ Backslash commands are available by default and are available regardless of acti
     \X0               - clear calibration to defaults
     \Z                - suspend automatic remote commands
 
-    UNDER_DEVELOPMENT_REMOTE_UNIT_COMMANDS
+    Extended Commands
+
+    (Commands below are disabled if compiling with OPTION_SAVE_MEMORY_EXCLUDE_EXTENDED_COMMANDS)
 
     \?ARxx            - analog pin read; xx = pin #
     \?AS              - query azimuth rotation status
@@ -102,5 +104,5 @@ Backslash commands are available by default and are available regardless of acti
     \?SA              - stop azimuth rotation
     \?SE              - stop elevation rotation
     \?SS              - stop all rotation
-    \!OKxx[]          - response to command sent to remote unit, valid command
-    \!??xx[]          - response to command sent to remote unit, error
+    \!OKxx[]          - response to command sent: valid command
+    \!??xx[]          - response to command sent: error
