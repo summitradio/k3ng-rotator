@@ -1,0 +1,9 @@
+
+
+#define FEATURE_PARK
+
+#define FEATURE_AUTOPARK  
+
+
+
+#define AUTOPARK_TIME_DEFAULT_MINS 15
