@@ -12,4 +12,6 @@ To activate Easycom emulation, uncomment just this line:
 
 `#define FEATURE_EASYCOM_EMULATION`
 
-Further information specific to the protocols is below.
+Further information specific to the protocols is subsequent sections.
+
+[Command Reference](https://github.com/k3ng/k3ng_rotator_controller/wiki/820-Command-Reference)
