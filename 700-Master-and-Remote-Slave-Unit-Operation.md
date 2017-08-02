@@ -42,7 +42,7 @@ For an Ethernet link, configure the Ethernet port settings:
 
     #define ETHERNET_SLAVE_IP_ADDRESS 192,168,1,173
 
-#Remote Unit Compilation and Configuration
+# Remote Unit Compilation and Configuration
 
 To configure a remote unit, do the following:
 
@@ -89,7 +89,7 @@ In order to operate a master/slave system you do not need to know the master/sla
     RB - reboot
     CL - read the clock
 
-###Remote to Host Responses
+### Remote to Host Responses
 
     ERxx - report an error; xx = error #
     EV - report an event
@@ -211,7 +211,7 @@ Various other host/remote communications settings:
 
 {under construction} 
 
-##Troubleshooting, Debugging, and Testing
+## Troubleshooting, Debugging, and Testing
 
 {under construction}
 
