@@ -71,6 +71,8 @@ Backslash commands are available by default and are available regardless of acti
     \XM               - calibrate azimuth and elevation to current moon position
     \XS               - calibrate azimuth and elevation to current sun position
     \X0               - clear calibration to defaults
+    \Y                - query AutoPark status
+    \Yx[x][x][x]      - deactivate or activate AutoPark and set timer time
     \Z                - suspend automatic remote commands
 
     Extended Commands
