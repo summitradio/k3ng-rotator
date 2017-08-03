@@ -2,7 +2,7 @@ Rotators can basically be divided into two major groups:
 * DC rotated
 * AC rotated
 
-Most Yaesu G series rotators are DC based, usually with a voltage from 0 to 24 volts and the polarity of  the DC voltage is switched to provide clockwise and counter-clockwise rotation.  The G-5500 is one exception; it has AC operated motors.
+Most Yaesu G series rotators are DC based, usually with a voltage from 0 to 24 volts and the polarity of  the DC voltage is switched to provide clockwise and counter-clockwise rotation.  The G-5500 is one exception; it has a DC azimuth motor and an AC elevation motor.
 
 Older rotators are most often AC operated.  Either dual motor windings will be used or a single winding with a switch phase shift capacitor provides alternate direction rotation.
 
