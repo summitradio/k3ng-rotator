@@ -74,6 +74,7 @@ Backslash commands are available by default and are available regardless of acti
     \Y                - query AutoPark status
     \Yx[x][x][x]      - deactivate or activate AutoPark and set timer time
     \Z                - suspend automatic remote commands
+    \+                - azimuth LCD display mode switch: normal, raw degrees, +overlap
 
     Extended Commands
 
