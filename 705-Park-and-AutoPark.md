@@ -28,3 +28,17 @@ The \Y command is used to query the status of AutoPark and set the AutoPark time
 
     \Y - AutoPark status
     \Yx[x][x][x] - Set AutoPark timer time (minutes) 
+
+# Pins
+
+Several pins are available for use with the Park and Autopark feature:
+
+`#define button_park 0  // pull low to initiate park`
+
+`#define park_in_progress_pin 0  // goes high when a park has been initiated and rotation is in progress`
+
+`#define parked_pin 0            // goes high when in a parked position`
+
+`#define pin_autopark_disable 48       // Pull low to disable autopark`
+
+`#define pin_autopark_timer_reset 44   // Pull low to reset the autopark timer (tie in with rig PTT)`
