@@ -79,6 +79,26 @@ The pins are defined in this section of code:
 
 `#define pin_analog_el_out 0`
 
-Additionally, the corresponding elevation voltage maximum can be set in the rotator_setting.h file:
+Additionally, the corresponding elevation voltage maximum can be set in your settings file:
 
 `#define ANALOG_OUTPUT_MAX_EL_DEGREES 180`
+
+## Rotation LEDs
+
+Additional optional pins are provided for driving LEDs to indicate rotation"
+
+`\\#define pin_led_cw 0`
+
+`\\#define pin_led_ccw 0`
+
+`\\#define pin_led_up 0`
+
+`\\#define pin_led_down 0`
+
+Uncomment the lines and change the 0s to the pins you want to configure.
+
+The active and inactive levels of these pins can be configured in your settings file:
+
+`#define PIN_LED_ACTIVE_STATE HIGH`
+
+`#define PIN_LED_INACTIVE_STATE LOW`
